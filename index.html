@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n-key="title">Troy Yachting — Yacht Manufacturing & Marine Services</title>
+    <meta 
+        name="description" 
+        content="Troy Yachting, lüks yat üretimi ve kapsamlı denizcilik hizmetleri sunar. Hayallerinizdeki yatı tasarlamak ve inşa etmek için buradayız."
+        data-i18n-key="meta_description"
+        data-i18n-attr="content">
+    <meta name="theme-color" content="#0d1b2a">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Troy Yachting — Yacht Manufacturing & Marine Services" data-i18n-key="title" data-i18n-attr="content">
+    <meta 
+        property="og:description" 
+        content="Lüks yat üretimi ve kapsamlı denizcilik hizmetleri."
+        data-i18n-key="og_description"
+        data-i18n-attr="content">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://storage.googleapis.com/aai-web-samples/troy-yachting/manufacturing.jpg">
+    <meta property="og:url" content="https://www.troyyachting.com"> <!-- Placeholder URL -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop playsinline id="bg-video" poster="https://storage.googleapis.com/aai-web-samples/troy-yachting/manufacturing.jpg">
+            <source src="troy_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="video-overlay"></div>
+
+    <a href="#main-content" class="skip-link" data-i18n-key="skip_link">Ana İçeriğe Geç</a>
+
+    <header class="site-header">
+        <div class="header-content">
+            <a href="/" class="logo" aria-label="Troy Yachting Ana Sayfa" data-i18n-key="logo_aria" data-i18n-attr="aria-label">
+                <img src="logo.png" alt="" class="logo__img" width="100" height="100" aria-hidden="true">
+                <div class="logo-text">
+                    <h1>Troy Yachting</h1>
+                    <span class="logo-email">info@troyyachting.com</span>
+                </div>
+            </a>
+
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-toggle-label" aria-label="Menüyü aç/kapat">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#about-us" data-i18n-key="nav_about">Hakkımızda</a></li>
+                    <li><a href="#our-dreams" data-i18n-key="nav_dreams">Hayallerimiz</a></li>
+                    <li><a href="#contact-us" data-i18n-key="nav_contact">Bize Ulaşın</a></li>
+                </ul>
+                <div class="lang-switcher">
+                    <label for="lang-select" class="sr-only" data-i18n-key="lang_select_label">Dil Seçin</label>
+                    <select id="lang-select" class="lang-select">
+                        <option value="tr">🇹🇷 TR</option>
+                        <option value="en">🇬🇧 EN</option>
+                        <option value="ar">🇦🇪 AR</option>
+                    </select>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" class="main-grid">
+        <a href="/manufacturing.html" class="card-link">
+            <img 
+                src="yacht_manufacturing.webp" 
+                alt="Üretim hangarında lüks bir yat." 
+                class="card__image" 
+                loading="lazy" 
+                decoding="async"
+                width="800"
+                height="600"
+                data-i18n-key="alt_manufacturing"
+                data-i18n-attr="alt">
+            <div class="card__overlay">
+                <h2 class="card__title" data-i18n-key="card_manufacturing">Yacht Manufacturing</h2>
+            </div>
+        </a>
+
+        <a href="/services.html" class="card-link">
+             <img 
+                src="marine_services.webp" 
+                alt="Denizde hızla ilerleyen modern bir yat." 
+                class="card__image" 
+                loading="lazy" 
+                decoding="async"
+                width="800"
+                height="600"
+                data-i18n-key="alt_services"
+                data-i18n-attr="alt">
+            <div class="card__overlay">
+                <h2 class="card__title" data-i18n-key="card_services">Marine Services</h2>
+            </div>
+        </a>
+    </main>
+
+    <div class="content-sections">
+        <section id="about-us" class="page-section" aria-labelledby="about-us-title">
+            <h2 id="about-us-title" class="section-title" data-i18n-key="section_about_title">Hakkımızda</h2>
+            <p data-i18n-key="section_about_content">Denizcilik sektöründeki yılların deneyimiyle Troy Yachting, geleneksel işçiliği modern teknolojiyle birleştirerek eşsiz yatlar yaratır. Deniz tutkumuz ve kaliteye olan bağlılığımız, üstlendiğimiz her projeye yön verir.</p>
+        </section>
+
+        <section id="our-dreams" class="page-section" aria-labelledby="our-dreams-title">
+            <h2 id="our-dreams-title" class="section-title" data-i18n-key="section_dreams_title">Hayallerimiz</h2>
+            <p data-i18n-key="section_dreams_content">Yat tasarımı ve mühendisliğinin sınırlarını zorlamayı hayal ediyoruz. Amacımız sadece lüks ve yüksek performanslı değil, aynı zamanda sürdürülebilir ve okyanus çevresiyle uyumlu tekneler inşa etmektir.</p>
+        </section>
+
+        <section id="contact-us" class="page-section" aria-labelledby="contact-us-title">
+            <h2 id="contact-us-title" class="section-title" data-i18n-key="section_contact_title">Bize Ulaşın</h2>
+            <p data-i18n-key="section_contact_content">Yolculuğunuza başlamaya hazır mısınız? Vizyonunuzu görüşmek için bizimle iletişime geçin. Hayalinizdeki yatı hayata geçirmenize yardımcı olmaktan heyecan duyuyoruz. Bize info@troyyachting.com adresinden e-posta ile ulaşın veya tersanemizde bizi ziyaret edin.</p>
+        </section>
+    </div>
+
+    <footer class="site-footer">
+        <p data-i18n-key="footer_copyright">© 2025 Troy Yachting — tüm hakları saklıdır.</p>
+    </footer>
+
+    <script src="index.js" defer></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
