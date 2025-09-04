@@ -80,7 +80,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const defaultLang = 'tr';
 
     const arrowIcon = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23a8b2d1'%3E%3Cpath d='M6 9.25a.75.75 0 01-.53-.22l-3-3a.75.75 0 011.06-1.06L6 7.94l2.47-2.47a.75.75 0 111.06 1.06l-3 3a.75.75 0 01-.53.22z'/%3E%3C/svg%3E";
-    const iconMap: Record<string, string> = { en: 'en.png', tr: 'tr.png', ar: 'ar.png' };
+    const iconMap: Record<string, string> = {
+        en: new URL('./en.png', import.meta.url).href,
+        tr: new URL('./tr.png', import.meta.url).href,
+        ar: new URL('./ar.png', import.meta.url).href
+    };
     const setLangIcon = (lang: string): void => {
         if (!langSelect) return;
         const icon = iconMap[lang];
