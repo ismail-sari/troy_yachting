@@ -244,7 +244,7 @@ img {
     color: var(--color-text-secondary);
     border: 1px solid var(--color-text-secondary);
     padding-block: var(--spacing-xs);
-    padding-inline-start: 0.8rem;
+    padding-inline-start: 2rem;
     padding-inline-end: 2.2rem;
     border-radius: 4px;
     font-family: var(--font-sans);
@@ -252,9 +252,10 @@ img {
     font-weight: 600;
     cursor: pointer;
     transition: color var(--transition-speed) ease, border-color var(--transition-speed) ease;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23a8b2d1'%3E%3Cpath d='M6 9.25a.75.75 0 01-.53-.22l-3-3a.75.75 0 011.06-1.06L6 7.94l2.47-2.47a.75.75 0 111.06 1.06l-3 3a.75.75 0 01-.53.22z'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 0.75rem center;
+    background-image: url('tr.png'), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23a8b2d1'%3E%3Cpath d='M6 9.25a.75.75 0 01-.53-.22l-3-3a.75.75 0 011.06-1.06L6 7.94l2.47-2.47a.75.75 0 111.06 1.06l-3 3a.75.75 0 01-.53.22z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat, no-repeat;
+    background-position: 0.4rem center, right 0.75rem center;
+    background-size: 1rem auto, 12px;
 }
 
 .lang-select:hover, .lang-select:focus {
@@ -265,7 +266,15 @@ img {
 .lang-select option {
     background-color: var(--color-background);
     color: var(--color-text-primary);
+    padding-inline-start: 2rem;
+    background-repeat: no-repeat;
+    background-position: 0.4rem center;
+    background-size: 1rem auto;
 }
+
+.lang-select option[value="tr"] { background-image: url('tr.png'); }
+.lang-select option[value="en"] { background-image: url('en.png'); }
+.lang-select option[value="ar"] { background-image: url('ar.png'); }
 
 
 /* --- Hamburger Menü (Mobil) --- */
