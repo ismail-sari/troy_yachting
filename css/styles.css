@@ -376,6 +376,15 @@ html[dir="rtl"] .logo {
     flex-direction: row-reverse;
 }
 
+html[dir="rtl"] .header-content {
+    flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .main-nav {
+    margin-inline-start: 0;
+    margin-inline-end: auto;
+}
+
 html[dir="rtl"] .main-nav a:not(.lang-link)::after {
     transform-origin: left;
 }

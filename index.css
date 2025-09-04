@@ -186,6 +186,16 @@ img {
     transform-origin: left;
 }
 
+/* --- RTL Support --- */
+html[dir="rtl"] .header-content {
+    flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .main-nav {
+    margin-left: 0;
+    margin-right: auto;
+}
+
 
 /* --- Language Switcher --- */
 .lang-switcher {
