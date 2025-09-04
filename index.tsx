@@ -46,6 +46,29 @@ const translations = {
     "section_contact_title": "Bize Ulaşın",
     "section_contact_content": "Yolculuğunuza başlamaya hazır mısınız? Vizyonunuzu görüşmek için bizimle iletişime geçin. Hayalinizdeki yatı hayata geçirmenize yardımcı olmaktan heyecan duyuyoruz. Bize info@troyyachting.com adresinden e-posta ile ulaşın veya tersanemizde bizi ziyaret edin.",
     "footer_copyright": "© 2025 Troy Yachting — tüm hakları saklıdır."
+  },
+  "ar": {
+    "html_lang": "ar",
+    "title": "تروي لليخوت — تصنيع اليخوت والخدمات البحرية",
+    "meta_description": "تقدم تروي لليخوت خدمات تصنيع اليخوت الفاخرة والخدمات البحرية الشاملة. نحن هنا لتصميم وبناء يخت أحلامك.",
+    "og_description": "تصنيع اليخوت الفاخرة والخدمات البحرية الشاملة.",
+    "skip_link": "تجاوز إلى المحتوى الرئيسي",
+    "logo_aria": "الصفحة الرئيسية لتروي لليخوت",
+    "lang_select_label": "اختر اللغة",
+    "nav_about": "من نحن",
+    "nav_dreams": "أحلامنا",
+    "nav_contact": "اتصل بنا",
+    "card_manufacturing": "تصنيع اليخوت",
+    "card_services": "الخدمات البحرية",
+    "alt_manufacturing": "يخت فاخر في حظيرة التصنيع.",
+    "alt_services": "يخت حديث يبحر بسرعة في البحر.",
+    "section_about_title": "من نحن",
+    "section_about_content": "بفضل سنوات من الخبرة في الصناعة البحرية، تجمع تروي لليخوت بين الحرفية التقليدية والتكنولوجيا الحديثة لإنشاء يخوت لا مثيل لها. شغفنا بالبحر والتزامنا بالجودة يقود كل مشروع نقوم به.",
+    "section_dreams_title": "أحلامنا",
+    "section_dreams_content": "نحلم بدفع حدود تصميم وهندسة اليخوت. هدفنا هو بناء سفن ليست فاخرة وعالية الأداء فحسب، بل أيضًا مستدامة ومتناغمة مع بيئة المحيط.",
+    "section_contact_title": "اتصل بنا",
+    "section_contact_content": "هل أنت مستعد لبدء رحلتك؟ اتصل بنا لمناقشة رؤيتك. نحن متحمسون لمساعدتك في تحقيق يخت أحلامك. تواصل معنا عبر البريد الإلكتروني على info@troyyachting.com أو قم بزيارتنا في حوض بناء السفن الخاص بنا.",
+    "footer_copyright": "© 2025 تروي لليخوت — جميع الحقوق محفوظة."
   }
 };
 
@@ -53,7 +76,7 @@ const translations = {
 document.addEventListener('DOMContentLoaded', () => {
 
     const langSelect = document.getElementById('lang-select') as HTMLSelectElement;
-    const supportedLangs = ['en', 'tr'];
+    const supportedLangs = ['en', 'tr', 'ar'];
     const defaultLang = 'tr';
 
     const setupNavigation = (): void => {
@@ -78,7 +101,9 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        document.documentElement.lang = lang;
+        const htmlEl = document.documentElement;
+        htmlEl.lang = lang;
+        htmlEl.dir = lang === 'ar' ? 'rtl' : 'ltr';
         if (langSelect) {
             langSelect.value = lang;
         }
