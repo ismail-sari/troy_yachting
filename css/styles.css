@@ -372,8 +372,29 @@ img {
 
 
 /* --- RTL Desteği --- */
+html[dir="rtl"] .header-content {
+    flex-direction: row;
+}
+
 html[dir="rtl"] .logo {
     flex-direction: row-reverse;
+    order: 2;
+}
+
+html[dir="rtl"] .main-nav {
+    order: 1;
+    margin-inline-start: 0;
+    margin-inline-end: auto;
+}
+
+html[dir="rtl"] .main-nav ul {
+    flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .lang-switcher {
+    order: -1;
+    margin-inline-start: 0;
+    margin-inline-end: var(--spacing-m);
 }
 
 html[dir="rtl"] .main-nav a:not(.lang-link)::after {
