@@ -79,6 +79,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const supportedLangs = ['en', 'tr', 'ar'];
     const defaultLang = 'tr';
 
+    const arrowIcon = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23a8b2d1'%3E%3Cpath d='M6 9.25a.75.75 0 01-.53-.22l-3-3a.75.75 0 011.06-1.06L6 7.94l2.47-2.47a.75.75 0 111.06 1.06l-3 3a.75.75 0 01-.53.22z'/%3E%3C/svg%3E";
+    const iconMap: Record<string, string> = { en: 'en.png', tr: 'tr.png', ar: 'ar.png' };
+    const setLangIcon = (lang: string): void => {
+        if (!langSelect) return;
+        const icon = iconMap[lang];
+        if (icon) {
+            langSelect.style.backgroundImage = `url(${icon}), url(${arrowIcon})`;
+        }
+    };
+
     const setupNavigation = (): void => {
         const navLinks = document.querySelectorAll('.main-nav a[href^="#"]');
         const menuToggle = document.getElementById('menu-toggle') as HTMLInputElement;
@@ -139,6 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Determine and set the initial language
     const initialLang = getInitialLanguage();
     applyTranslations(initialLang);
+    setLangIcon(initialLang);
     
     // Listen for language changes
     if (langSelect) {
@@ -146,6 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const newLang = langSelect.value;
             localStorage.setItem('lang', newLang);
             applyTranslations(newLang);
+            setLangIcon(newLang);
         });
     }
     
